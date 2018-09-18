@@ -1,0 +1,22 @@
+[Unit]
+Description=Tripone's distributed currency daemon
+After=network.target
+
+[Service]
+User=tripone
+Group=tripone
+
+Type=forking
+PIDFile=/var/lib/triponed/triponed.pid
+ExecStart=/usr/bin/triponed -daemon -pid=/var/lib/triponed/triponed.pid \
+-conf=/etc/tripone/tripone.conf -datadir=/var/lib/triponed -disablewallet
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Tripone
+Comment=Tripone P2P Cryptocurrency
+Comment[fr]=Tripone, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=Tripone, eşten eşe kriptografik sanal para birimi
+Exec=tripone-qt %u
+Terminal=false
+Type=Application
+Icon=tripone128
+MimeType=x-scheme-handler/triponecash;
+Categories=Office;Finance;

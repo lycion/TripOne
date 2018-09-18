@@ -1,0 +1,66 @@
+Source: tripone
+Section: utils
+Priority: optional
+Maintainer: Andrew Stone <g.andrew.stone@gmail.com>
+Uploaders: Andrea Suisani <sickpig@gmail.com>
+Build-Depends: debhelper,
+ devscripts,
+ automake,
+ libtool,
+ bash-completion,
+ libboost-system-dev (>> 1.35) | libboost-system1.35-dev,
+ libdb4.8++-dev,
+ libssl-dev,
+ libevent-dev,
+ pkg-config,
+ libminiupnpc8-dev | libminiupnpc-dev (>> 1.6),
+ libboost-filesystem-dev (>> 1.35) | libboost-filesystem1.35-dev,
+ libboost-program-options-dev (>> 1.35) | libboost-program-options1.35-dev,
+ libboost-thread-dev (>> 1.35) | libboost-thread1.35-dev,
+ libboost-test-dev (>> 1.35) | libboost-test1.35-dev,
+ qttools5-dev-tools, qttools5-dev,
+ libqrencode-dev,
+ libprotobuf-dev, protobuf-compiler,
+ python
+Standards-Version: 3.9.2
+Homepage: https://www.tripone.info/
+Vcs-Git: git://github.com/TripOne/TripOne.git
+Vcs-Browser: https://github.com/TripOne/TripOne
+
+Package: triponed
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: peer-to-peer network based digital currency - daemon
+ Tripone is an experimental new digital currency that enables instant
+ payments to anyone, anywhere in the world. Tripone uses peer-to-peer
+ technology to operate with no central authority: managing transactions
+ and issuing money are carried out collectively by the network. Tripone Unlimited
+ is the name of the open source software which enables the use of this currency.
+ .
+ This package provides the daemon, triponed, and the CLI tool
+ tripone-cli to interact with the daemon.
+
+Package: tripone-qt
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: peer-to-peer network based digital currency - Qt GUI
+ Tripone is an experimental new digital currency that enables instant
+ payments to anyone, anywhere in the world. Tripone uses peer-to-peer
+ technology to operate with no central authority: managing transactions
+ and issuing money are carried out collectively by the network. Tripone Unlimited
+ is the name of the open source software which enables the use of this currency.
+ .
+ This package provides Tripone-Qt, a GUI for Tripone based on Qt.
+
+Package: tripone-tx
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: peer-to-peer digital currency - standalone transaction tool
+ Tripone is an experimental new digital currency that enables instant
+ payments to anyone, anywhere in the world. Tripone uses peer-to-peer
+ technology to operate with no central authority: managing transactions
+ and issuing money are carried out collectively by the network.
+ .
+ This package provides tripone-tx, a command-line transaction creation
+ tool which can be used without a tripone daemon.  Some means of
+ exchanging minimal transaction data with peers is still required.

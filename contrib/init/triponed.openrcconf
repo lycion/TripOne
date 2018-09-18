@@ -1,0 +1,33 @@
+# /etc/conf.d/triponed: config file for /etc/init.d/triponed
+
+# Config file location
+#TRIPONED_CONFIGFILE="/etc/tripone/tripone.conf"
+
+# What directory to write pidfile to?  (created and owned by $TRIPONED_USER)
+#TRIPONED_PIDDIR="/var/run/triponed"
+
+# What filename to give the pidfile
+#TRIPONED_PIDFILE="${TRIPONED_PIDDIR}/triponed.pid"
+
+# Where to write triponed data (be mindful that the blockchain is large)
+#TRIPONED_DATADIR="/var/lib/triponed"
+
+# User and group to own triponed process
+#TRIPONED_USER="tripone"
+#TRIPONED_GROUP="tripone"
+
+# Path to triponed executable
+#TRIPONED_BIN="/usr/bin/triponed"
+
+# Nice value to run triponed under
+#TRIPONED_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+TRIPONED_OPTS="-disablewallet"
+
+# The timeout in seconds OpenRC will wait for triponed to terminate
+# after a SIGTERM has been raised.
+# Note that this will be mapped as argument to start-stop-daemon's
+# '--retry' option, which means you can specify a retry schedule
+# here. For more information see man 8 start-stop-daemon.
+TRIPONED_SIGTERM_TIMEOUT=60

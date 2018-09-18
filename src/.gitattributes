@@ -1,0 +1,14 @@
+#
+# .gitattributes file
+#
+# NOTE: This file currently lists all files  that _might_ be required
+# to be formatted properly. The files listed here are filtered once
+# more by the list of files in .formatted-files before formatting
+# is applied.
+
+*.h filter=tripone-clang-format
+*.cpp filter=tripone-clang-format
+test/*.h filter=tripone-clang-format
+test/*.cpp filter=tripone-clang-format
+qt/*.h filter=tripone-clang-format
+qt/*.cpp filter=tripone-clang-format

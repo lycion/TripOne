@@ -1,0 +1,5 @@
+Building Tripone
+
+See doc/build-*.md for instructions on building triponed,
+the intended-for-services, no-graphical-interface, reference
+implementation of Tripone.

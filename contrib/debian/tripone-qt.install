@@ -1,0 +1,6 @@
+usr/local/bin/tripone-qt usr/bin
+share/pixmaps/tripone32.xpm usr/share/pixmaps
+share/pixmaps/tripone16.xpm usr/share/pixmaps
+share/pixmaps/tripone128.png usr/share/pixmaps
+debian/tripone-qt.desktop usr/share/applications
+debian/tripone-qt.protocol usr/share/kde4/services/
